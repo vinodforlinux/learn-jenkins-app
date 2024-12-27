@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         ENV1 = "value1"
+        // AUTHTOKEN = credential('credid')
     }
 
     stages {
