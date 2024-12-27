@@ -39,9 +39,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            agent {
-                
-            }
+            
             steps {
                 sh '''
                     echo "Inside Deploy"
