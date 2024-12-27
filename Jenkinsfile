@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        ENV1 = "value1"
+    }
+
     stages {
         stage('Build') {
             agent {
@@ -31,6 +35,17 @@ pipeline {
                 sh '''
                     test -f build/index.html
                     npm test
+                '''
+            }
+        }
+        stage('Deploy') {
+            agent {
+                
+            }
+            steps {
+                sh '''
+                    echo "Inside Deploy"
+                    echo "Environment Name : $ENV1"
                 '''
             }
         }
